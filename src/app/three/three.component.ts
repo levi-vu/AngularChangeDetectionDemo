@@ -1,4 +1,4 @@
-import { Component, } from '@angular/core';
+import { ChangeDetectionStrategy, Component, } from '@angular/core';
 import { SixComponent } from '../six/six.component';
 import { SevenComponent } from '../seven/seven.component';
 
@@ -23,7 +23,7 @@ import { SevenComponent } from '../seven/seven.component';
   styles: [
   ],
   standalone: true,
-
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThreeComponent {
   renderCount = 0;

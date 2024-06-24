@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TwoComponent } from '../two/two.component';
 import { ThreeComponent } from '../three/three.component';
 
@@ -22,6 +22,7 @@ import { ThreeComponent } from '../three/three.component';
         </ul>
   `,
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 export class OneComponent {

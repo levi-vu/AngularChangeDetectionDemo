@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit } from '@angular/core';
-import { hightlight } from '../highlight';
+import { ChangeDetectionStrategy, Component, } from '@angular/core';
 
 @Component({
   selector: 'app-five',
@@ -14,6 +13,7 @@ import { hightlight } from '../highlight';
   styles: [
   ],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 export class FiveComponent {

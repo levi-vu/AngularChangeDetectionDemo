@@ -13,6 +13,7 @@ import { hightlight } from '../highlight';
   styles: [
   ],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 export class FourComponent {

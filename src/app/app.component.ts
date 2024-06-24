@@ -5,7 +5,6 @@ import { OneComponent } from './one/one.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-
   imports: [RouterOutlet, OneComponent],
   template: `
   <div class="tree">
