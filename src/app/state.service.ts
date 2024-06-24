@@ -1,14 +1,13 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Injectable, signal } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StateService {
-  public state: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  public state = signal(true);
   constructor() { }
 
   modifyState() {
-    this.state.next(this.state.value + 1);
+    this.state.update(state => !state)
   }
 }

@@ -7,20 +7,17 @@ import { StateService } from '../state.service';
   selector: 'app-two',
   standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [FourComponent, FiveComponent],
+  imports: [FiveComponent],
   template: `
           <a [class]="{'red': renderCount  %  2 != 0}">Cmp2
-          <h1>{{renderCount}} </h1>
+          
            {{count()}}
-          <button (click)="triggerRender()">Trigger Render</button>
+          <div><button (click)="triggerRender()">Trigger Render</button></div>
           <div> <button (click)="changeState()">Change State</button> </div>
 
           </a>
 
 <ul>
-    <li>
-        <app-four></app-four>
-    </li>
     <li>
         <app-five></app-five>
     </li>

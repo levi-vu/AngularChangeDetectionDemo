@@ -7,8 +7,8 @@ import { SevenComponent } from '../seven/seven.component';
   imports: [SixComponent, SevenComponent],
   template: `
             <a [class]="{'red': renderCount  %  2 != 0}">Cmp3
-            <h1>{{renderCount}} </h1>
-            <button (click)="triggerRender()">Trigger Render</button>
+            
+            <div><button (click)="triggerRender()">Trigger Render</button></div>
             </a>
              {{count()}}
 <ul>
