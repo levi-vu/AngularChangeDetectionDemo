@@ -5,10 +5,10 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class StateService {
-  public state: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  public state: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   constructor() { }
 
   modifyState() {
-    this.state.next(this.state.value + 1);
+    this.state.next(!this.state.value);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, } from '@angular/core';
+import { ChangeDetectionStrategy, Component, } from '@angular/core';
 import { SixComponent } from '../six/six.component';
 import { SevenComponent } from '../seven/seven.component';
 
@@ -7,8 +7,8 @@ import { SevenComponent } from '../seven/seven.component';
   imports: [SixComponent, SevenComponent],
   template: `
             <a [class]="{'red': renderCount  %  2 != 0}">Cmp3
-            <h1>{{renderCount}} </h1>
-            <button (click)="triggerRender()">Trigger Render</button>
+            
+            <div>  <button (click)="triggerRender()">Trigger Render</button></div>
             </a>
              {{count()}}
 <ul>
@@ -23,7 +23,7 @@ import { SevenComponent } from '../seven/seven.component';
   styles: [
   ],
   standalone: true,
-
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThreeComponent {
   renderCount = 0;

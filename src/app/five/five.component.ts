@@ -1,12 +1,11 @@
-import { ChangeDetectionStrategy, Component, ElementRef, OnInit } from '@angular/core';
-import { hightlight } from '../highlight';
+import { ChangeDetectionStrategy, Component, } from '@angular/core';
 
 @Component({
   selector: 'app-five',
   template: `
      <a [class]="{'red': renderCount  %  2 != 0}">Cmp5
-     <h1>{{renderCount}} </h1>
-     <button (click)="triggerRender()">Trigger Render</button>
+     
+     <div>  <button (click)="triggerRender()">Trigger Render</button></div>
      </a>
       {{count()}}
 
@@ -14,6 +13,7 @@ import { hightlight } from '../highlight';
   styles: [
   ],
   standalone: true,
+  changeDetection: ChangeDetectionStrategy.OnPush
 
 })
 export class FiveComponent {
